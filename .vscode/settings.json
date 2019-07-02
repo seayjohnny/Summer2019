@@ -1,0 +1,8 @@
+{
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "*.cu": "cpp",
+        "*.cuh": "cpp",
+        "iosfwd": "cpp"
+    }
+}

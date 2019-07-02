@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "nvcc -use_fast_math ${file} -o ${fileDirname}/${fileBasenameNoExtension} -lglut -lGLU -lGL ; ${fileDirname}/${fileBasenameNoExtension}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "cudaDebug",
+            "type": "shell",
+            "command": "nvcc -use_fast_math -lineinfo '${file}' -o ${fileDirname}/${fileBasenameNoExtension} -lglut -lGL -lm ; cuda-memcheck ${fileDirname}/${fileBasenameNoExtension} |more",
+            "problemMatcher": []
+        },
+    ]
+}
