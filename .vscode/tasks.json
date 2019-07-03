@@ -6,7 +6,7 @@
         {
             "type": "shell",
             "label": "g++ build active file",
-            "command": "nvcc -use_fast_math ${file} -o ${fileDirname}/${fileBasenameNoExtension} -lglut -lGLU -lGL ; ${fileDirname}/${fileBasenameNoExtension}",
+            "command": "nvcc -use_fast_math ./src/nbody/NBodySim.cu -o ./src/nbody/NBodySim -lglut -lGLU -lGL ; ./src/nbody/NBodySim",
             "group": {
                 "kind": "build",
                 "isDefault": true

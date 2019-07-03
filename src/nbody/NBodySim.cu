@@ -246,6 +246,6 @@ void NBodySim::run()
 
 int main()
 {
-    NBodySim sim("ch150");
+    NBodySim sim("zi929");
     return 0;
 }
